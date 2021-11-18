@@ -1,3 +1,26 @@
+:root {
+  --red: #d55757;
+}
+
 html {
-  font-size: 10px;
+  font-size: 16px;
+}
+
+a.ButtonTypeLink {
+  /* just copied this from source via inspector */
+  display: inline-block;
+  background-color: #ff424d;
+  border-radius: 9999 px;
+  color: #fff;
+  font-weight: 500;
+  border: 2 px solid transparent;
+  line-height: 1.9;
+  padding: 0.46875 rem 1 rem;
+  font-size: 0.875rem !important;
+}
+
+a.ButtonTypeLink:hover {
+  color: #ff424d;
+  border-color: #ff424d;
+  background-color: #fff;
 }
