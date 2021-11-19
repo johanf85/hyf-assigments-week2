@@ -1,0 +1,89 @@
+:root {
+  --navbarheight: 3rem;
+}
+
+header {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1 px solid var(--greyborder);
+}
+
+nav {
+  height: var(--navbarheight);
+}
+
+.fa-logo-navbar {
+  font-size: 2rem;
+  color: var(--color-coral);
+  font-style: normal;
+}
+
+/* Menu CSS based on https://css-tricks.com/solved-with-css-dropdown-menus/ */
+
+ul.MenuTree {
+  position: relative;
+}
+
+ul.MenuTree,
+ul.MenuTree li ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul.MenuTree li {
+  margin: 0;
+}
+
+ul.MenuTree li ul li {
+  display: block;
+}
+
+ul.MenuTree li ul li a {
+  display: block;
+}
+
+ul#MenuTree li ul li:hover {
+  background-image: none;
+}
+
+ul.MenuTree li:hover > ul,
+ul.MenuTree li ul:hover {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  ul.MenuTree {
+    display: block;
+  }
+
+  ul.MenuTree li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  ul.MenuTree,
+  ul.MenuTree li ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.MenuTree {
+    position: relative;
+    display: block;
+  }
+
+  ul.MenuTree li ul {
+    display: block;
+    position: absolute;
+    top: var(--navbarheight);
+    width: 200 px;
+    height: 0 px;
+    overflow: hidden;
+    transition: height 0.2s;
+    z-index: 1;
+  }
+}

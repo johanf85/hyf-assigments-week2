@@ -1,9 +1,17 @@
+@import url(header.css);
+
 :root {
-  --red: #d55757;
+  --color-coral: #ff424d;
+  --greyborder: rgb(229, 227, 221); /* copied color code from source */
 }
 
 html {
   font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 a.ButtonTypeLink {
@@ -20,7 +28,11 @@ a.ButtonTypeLink {
 }
 
 a.ButtonTypeLink:hover {
-  color: #ff424d;
-  border-color: #ff424d;
+  color: var(--color-coral);
+  border-color: var(--color-coral);
   background-color: #fff;
+}
+
+.SectionBackgroundBlack {
+  background-color: #000;
 }
