@@ -6,6 +6,9 @@
   --color-coral: #ff424d;
   --greyborder: rgb(229, 227, 221); /* copied color code from source */
   --navgreycolor: rgb(36, 30, 18);
+  --headerheight: 2.5rem;
+  --color-black: #141518;
+  --color-midnight: #241e12;
 }
 
 html {
@@ -15,6 +18,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: var(--headerheight);
   font-family: aktiv-grotesk, sans-serif;
 }
 
@@ -33,14 +37,11 @@ a.ButtonTypeLink {
   line-height: 1.9;
   padding: 0.46875rem 1rem;
   font-size: 0.875rem !important;
+  width: max-content;
 }
 
 a.ButtonTypeLink:hover {
   color: var(--color-coral);
   border-color: var(--color-coral);
   background-color: #fff;
-}
-
-.SectionBackgroundBlack {
-  background-color: #000;
 }

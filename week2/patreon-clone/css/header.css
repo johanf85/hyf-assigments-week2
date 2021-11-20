@@ -1,7 +1,6 @@
 :root {
   --navbarheight: 1.2rem;
   --width-between-items-1st-dropdown: 2rem;
-  --space-between-border-dropdowncontent: 1rem;
 }
 
 header {
@@ -14,7 +13,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 2rem;
+  height: var(--headerheight);
   padding: 1rem;
 }
 
@@ -71,8 +70,8 @@ ul.MenuTree li.MenuItemDropdown {
 
 ul.MenuTree li ul li {
   display: block;
-  font-size:0.875rem;
-  font-weight:500;
+  font-size: 0.875rem;
+  font-weight: 500;
   /* padding-top: 3rem; */
   padding-left: 1rem;
   /* padding-bottom: 1rem; */
@@ -80,8 +79,8 @@ ul.MenuTree li ul li {
 
 ul.MenuTree li ul li span.MenuItemDescription {
   display: block;
-  font-size:0.875rem;
-  font-weight:normal;
+  font-size: 0.875rem;
+  font-weight: normal;
 }
 
 ul.MenuTree li ul li a {
@@ -130,31 +129,21 @@ input.searchfield {
     /* margin-bottom: 3rem; */
   }
 
-  ul.MenuTree,
-  ul.MenuTree li ul {
+  ul.MenuTree {
     margin: 0;
     padding: 0;
   }
 
-  ul.MenuTree li ul.ItemsWithDescription li:first-child
-  {
-    margin: var(--space-between-border-dropdowncontent) var(--space-between-border-dropdowncontent) var(--width-between-items-1st-dropdown) 0;
+  ul.MenuTree li ul {
+    padding: 1rem;
   }
 
-  ul.MenuTree li ul.ItemsWithDescription li:last-child
-  {
-    margin: var(--width-between-items-1st-dropdown) 0  0 var(--space-between-border-dropdowncontent);
+  ul.MenuTree li ul.ItemsWithDescription li:first-child {
+    margin: 0 0 var(--width-between-items-1st-dropdown) 0;
   }
 
-
-  ul.MenuTree li ul li:first-child
-  {
-    margin-top: var(--space-between-border-dropdowncontent) var(--space-between-border-dropdowncontent) 0 var(--space-between-border-dropdowncontent);
-  }
-
-  ul.MenuTree li ul li:last-child
-  {
-    margin: 0 0 var(--space-between-border-dropdowncontent) 0;
+  ul.MenuTree li ul.ItemsWithDescription li:last-child {
+    margin: var(--width-between-items-1st-dropdown) 0 0 0;
   }
 
   ul.MenuTree {
@@ -181,7 +170,6 @@ input.searchfield {
     /* padding: 1rem 1rem; */
     display: flex;
     flex-direction: column;
-}
   }
 
   ul.MenuTree li:hover > ul,
