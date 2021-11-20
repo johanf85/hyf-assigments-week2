@@ -1,9 +1,11 @@
 @import url(header.css);
 @import url(fonts.css);
+@import url(sections.css);
 
 :root {
   --color-coral: #ff424d;
   --greyborder: rgb(229, 227, 221); /* copied color code from source */
+  --navgreycolor: rgb(36, 30, 18);
 }
 
 html {
@@ -14,6 +16,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: aktiv-grotesk, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 a.ButtonTypeLink {

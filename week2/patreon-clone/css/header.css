@@ -1,18 +1,14 @@
 :root {
-  --navbarheight: 100%;
+  --navbarheight: auto;
 }
 
 header {
-  display: block;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   border-bottom: 1 px solid var(--greyborder);
-}
-
-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -23,12 +19,12 @@ header {
 nav {
   height: var(--navbarheight);
   margin-right: auto;
-  margin-left: 2rem;
-  height: 100%;
+  margin-left: 1rem;
+  height: auto;
 }
 
 i.fa-logo-navbar {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-coral);
   font-style: normal;
   justify-self: start;
@@ -39,6 +35,17 @@ i.fa-logo-navbar {
 
 ul.MenuTree {
   position: relative;
+  color: var(--navgreycolor);
+}
+
+ul.MenuTree a {
+  font-size: 0.875rem;
+  color: var(--navgreycolor);
+  font-weight: 500;
+}
+
+ul.MenuTree a:visited {
+  color: var(--navgreycolor);
 }
 
 ul.MenuTree,
@@ -51,8 +58,26 @@ ul.MenuTree li {
   margin: 0;
 }
 
+ul.MenuTree li.MenuItemDropdown {
+  padding-right: 1.4rem;
+  background-image: url(../images/arrow-down.svg);
+  background-size: 0.8rem 0.8em;
+  background-position: right;
+  background-position-y: 0.42rem;
+  background-repeat: no-repeat;
+}
+
 ul.MenuTree li ul li {
   display: block;
+  font-size:0.875rem;
+  font-weight:500;
+  margin-bottom: 3rem;
+}
+
+ul.MenuTree li ul li span.MenuItemDescription {
+  display: block;
+  font-size:0.875rem;
+  font-weight:normal;
 }
 
 ul.MenuTree li ul li a {
@@ -68,6 +93,25 @@ ul.MenuTree li ul:hover {
   display: block;
 }
 
+header input.searchfield,
+header a.HeaderLoginLink,
+header a.ButtonTypeLink {
+  margin: 0 2rem;
+}
+
+input.searchfield {
+  background-color: rgb(245, 244, 242);
+  border: 0 px;
+  font-weight: 500;
+  line-height: 1rem;
+  padding-left: 0.75 rem;
+  text-overflow: ellipsis;
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  width: 13 rem;
+  z-index: 900;
+  font-size: 0.875rem !important;
+}
+
 @media (min-width: 992px) {
   ul.MenuTree {
     display: block;
@@ -77,6 +121,9 @@ ul.MenuTree li ul:hover {
     display: inline-block;
     margin: 0;
     padding: 0 1rem;
+    position: relative;
+    height: 3rem;
+    /* margin-bottom: 3rem; */
   }
 
   ul.MenuTree,
@@ -94,10 +141,26 @@ ul.MenuTree li ul:hover {
     display: block;
     position: absolute;
     top: var(--navbarheight);
-    width: 200px;
+    width: max-content;
     height: 0px;
     overflow: hidden;
     transition: height 0.2s;
     z-index: 1;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+    /* position: absolute; */
+    max-width: 14rem;
+    margin-top: 1rem;
+    /* transform: translateY(10px); */
+    padding: 3rem 1rem;
+}
+  }
+
+  ul.MenuTree li:hover > ul,
+  ul.MenuTree li ul:hover {
+    transition: height 0.3s;
+    display: block;
+    height: auto;
   }
 }
