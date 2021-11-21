@@ -66,6 +66,8 @@ ul.MenuTree li.MenuItemDropdown {
   background-position: right;
   background-position-y: 0.42rem;
   background-repeat: no-repeat;
+  /* overflow: hidden; */
+  height: 3rem;
 }
 
 ul.MenuTree li ul li {
@@ -135,20 +137,21 @@ input.searchfield {
   }
 
   ul.MenuTree li ul {
-    padding: 1rem;
+    /* padding: 0 1rem 1rem 1rem; */
   }
 
   ul.MenuTree li ul.ItemsWithDescription li:first-child {
-    margin: 0 0 var(--width-between-items-1st-dropdown) 0;
+    margin: 1.5em 1.5em var(--width-between-items-1st-dropdown) 0;
   }
 
   ul.MenuTree li ul.ItemsWithDescription li:last-child {
-    margin: var(--width-between-items-1st-dropdown) 0 0 0;
+    margin: var(--width-between-items-1st-dropdown) 1.5em 1.5em 0;
   }
 
   ul.MenuTree {
     position: relative;
     display: block;
+    height: 5em;
   }
 
   ul.MenuTree li > ul {
@@ -176,6 +179,7 @@ input.searchfield {
   ul.MenuTree li ul:hover {
     transition: height 0.3s;
     /* display: block; */
-    height: auto;
+    height: max-content;
+    /* overflow: visible; */
   }
 }
