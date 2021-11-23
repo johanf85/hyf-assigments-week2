@@ -23,6 +23,7 @@ body {
   padding: 0;
   padding-top: var(--headerheight);
   font-family: aktiv-grotesk, sans-serif;
+  position: relative;
 }
 
 a {

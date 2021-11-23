@@ -11,7 +11,7 @@ header {
   height: var(--headerheight);
   padding: 1rem;
   /* margin-right: 1rem; */
-  z-index: 1;
+  z-index: 3;
 }
 
 nav {
@@ -43,7 +43,6 @@ header a.HeaderLoginLink:visited {
 }
 
 header a.ButtonTypeLink {
-  margin-right: 3rem;
 }
 
 input.searchfield {
@@ -83,6 +82,7 @@ ul.MenuTree {
   top: 0;
   left: 0;
   margin-top: 65px !important;
+  height: 100vh;
 }
 
 ul.MenuTree > li {
@@ -106,16 +106,25 @@ ul.MenuTree li ul {
   padding: 0;
   list-style: none;
   /* position: absolute; */
-  /* height: 800px; */
+  /* height: 100vh; */
   width: 100%;
+}
+
+ul.MenuTree {
+  display: none;
+}
+
+ul.MenuTree.MenuVisible {
+  display: block;
 }
 
 ul.MenuTree li ul {
   display: none;
 }
 
-ul.MenuTree li ul.DropdownVisible {
+ul.MenuTree li.DropdownVisible ul {
   display: block;
+  margin-top: 1.5rem;
 }
 
 ul.MenuTree > li {
@@ -132,7 +141,7 @@ ul.MenuTree li.MenuItemDropdown {
   background-size: 1.5rem 1.5rem;
   /* background-position: right; */
   background-position-y: 1rem;
-  background-position-x: 95%;
+  background-position-x: 88%;
   background-repeat: no-repeat;
 }
 
@@ -150,20 +159,51 @@ ul.MenuTree li ul li span.MenuItemDescription {
   margin-top: 1rem;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+#hamburgermenu {
+  display: inline-block;
+  vertical-align: top;
+  /* I think it is convenient to use inline-block if suitable, because of breaking and being able to set vertical align */
+  margin-left: 10px;
+  margin-top: 10px;
+  z-index: 2;
+  /* position: relative apparently needed for z-index */
+  position: relative;
+  margin-right: 2rem;
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+#hamburgermenu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+}
+
+#hamburgermenu.MenuVisible span:first-child {
+  transform: rotate(45deg) translate(-2px, -1px);
+  transform-origin: 0% 0%;
+  transition: transform 0.2s;
+}
+
+#hamburgermenu.MenuVisible span:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#hamburgermenu.MenuVisible span:last-child {
+  transform-origin: 0% 0%;
+  transform: rotate(-45deg) translate(-5px, -1px);
+  transition: transform 0.2s;
 }
 
 @media (min-width: 992px) {
-  ul.MenuTree li ul li a {
-    display: block;
+  #hamburgermenu {
+    display: none;
   }
 
-  ul.MenuTree {
+  ul.MenuTree li ul li a {
     display: block;
   }
 
@@ -232,12 +272,4 @@ ul.MenuTree li ul li span.MenuItemDescription {
   ul.MenuTree li ul:hover {
     height: max-content;
   }
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
 }

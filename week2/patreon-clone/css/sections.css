@@ -23,9 +23,16 @@ section p {
 }
 
 #Section1 {
+  width: 100%;
+  /* position:  relative; */
+}
+
+#Section1 .Section1FlexContainer {
   display: flex;
   justify-content: center;
   padding: 8rem 0;
+  flex-direction: column;
+  align-items: center;
 }
 
 #Section1 .section1left {
@@ -34,12 +41,12 @@ section p {
   flex-direction: column;
   justify-content: center;
   margin-right: 5rem;
+  margin-bottom: 4rem;
 }
 
 #Section1 img {
   width: 30.5rem;
   height: 17.4rem;
-  max-width: 100%;
 }
 
 /* Am playing around with Grid here, this is not the best way to do this. But as it is an excercise I leave it for now*/
@@ -116,4 +123,10 @@ section h3 {
 
 .UserStoryPhoto img {
   max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  #Section1 {
+    flex-direction: row;
+  }
 }

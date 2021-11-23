@@ -1,4 +1,10 @@
-$( ".MenuItemDropdown a" ).click(function() {
-    $( this ).toggleClass( "toggleon" );
-    $( ".MenuItemDropdown ul" ).toggleClass( "DropdownVisible" );
+$( ".MenuItemDropdown" ).click(function() {
+    $( this ).toggleClass( "DropdownVisible" );
   });
+
+  $( "#hamburgermenu" ).click(function() {
+    $(this).toggleClass("MenuVisible");
+    $( ".MenuTree" ).toggleClass( "MenuVisible" );
+  });
+
+  
