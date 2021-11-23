@@ -34,13 +34,17 @@ section p {
 }
 
 #Section1 .section1left {
-  /* width: 488px; */
+  max-width: 488px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* margin-right: 5rem; */
   margin-bottom: 4rem;
   margin: 2rem 1rem;
+}
+
+.section1left .ButtonTypeLink {
+  margin-top: 2rem;
 }
 
 #Section1 img {

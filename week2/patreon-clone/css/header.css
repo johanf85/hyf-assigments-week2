@@ -40,9 +40,6 @@ header a.HeaderLoginLink:visited {
   font-weight: 500;
 }
 
-header a.ButtonTypeLink {
-}
-
 input.searchfield {
   background-color: rgb(245, 244, 242);
   border: 0;
@@ -98,8 +95,6 @@ ul.MenuTree li ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* position: absolute; */
-  /* height: 100vh; */
   width: 100%;
 }
 
@@ -124,7 +119,6 @@ ul.MenuTree li.DropdownVisible ul {
 ul.MenuTree > li {
   margin: 0;
   padding: 1rem;
-  /* border-width: 1px; */
   border-bottom: 1px solid var(--greyborder);
   padding-left: 1rem;
 }
@@ -133,7 +127,6 @@ ul.MenuTree li.MenuItemDropdown {
   padding-right: 1.4rem;
   background-image: url(../images/arrow-down.svg);
   background-size: 1.5rem 1.5rem;
-  /* background-position: right; */
   background-position-y: 1rem;
   background-position-x: 88%;
   background-repeat: no-repeat;
@@ -141,7 +134,6 @@ ul.MenuTree li.MenuItemDropdown {
 
 ul.MenuTree li ul li {
   display: block;
-  /* font-size: 0.875rem; */
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -154,7 +146,6 @@ ul.MenuTree li ul li span.MenuItemDescription {
 }
 
 #hamburgermenu {
-  /* display: inline-block; */
   vertical-align: top;
   margin-left: 10px;
   margin-top: 10px;
@@ -283,5 +274,9 @@ ul.MenuTree li ul li span.MenuItemDescription {
   ul.MenuTree li:hover > ul,
   ul.MenuTree li ul:hover {
     height: max-content;
+  }
+
+  header a.ButtonTypeLink {
+    margin-right: 2rem;
   }
 }

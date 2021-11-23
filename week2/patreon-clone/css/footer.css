@@ -21,3 +21,8 @@ footer a {
   color: #fff;
   font-size: 0.875rem;
 }
+@media (min-width: 992px) {
+  footer {
+    flex-direction: row;
+  }
+}
