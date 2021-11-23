@@ -23,7 +23,8 @@ body {
   padding: 0;
   padding-top: var(--headerheight);
   font-family: aktiv-grotesk, sans-serif;
-  position: relative;
+  /* position: relative; */
+  /* padding-right: 0; */
 }
 
 a {
@@ -48,4 +49,8 @@ a.ButtonTypeLink:hover {
   color: var(--color-coral);
   border-color: var(--color-coral);
   background-color: #fff;
+}
+
+main {
+  /* width: 100vw; */
 }

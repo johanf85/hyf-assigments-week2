@@ -15,38 +15,38 @@ section p {
 
 .SectionBackgroundBlack h2 {
   color: var(--color-coral);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.25;
   font-family: Walsheim, sans-serif;
   font-weight: 700;
   margin: 0;
+  text-align: left;
 }
 
 #Section1 {
-  width: 100%;
-  /* position:  relative; */
-}
-
-#Section1 .Section1FlexContainer {
   display: flex;
   justify-content: center;
-  padding: 8rem 0;
+  padding: 4rem 0;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #Section1 .section1left {
-  width: 488px;
+  /* width: 488px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 5rem;
+  /* margin-right: 5rem; */
   margin-bottom: 4rem;
+  margin: 2rem 1rem;
 }
 
 #Section1 img {
   width: 30.5rem;
-  height: 17.4rem;
+  /* height: 17.4rem; */
+  max-width: 100%;
 }
 
 /* Am playing around with Grid here, this is not the best way to do this. But as it is an excercise I leave it for now*/
@@ -57,11 +57,14 @@ section p {
   justify-content: center;
   height: calc(342.5rem / 16);
   align-items: center;
+  width: 100%;
 }
 
 section h2 {
   font-size: calc(42rem / 16);
   font-family: "Walsheim";
+  width: 90%;
+  text-align: center;
 }
 
 section h3 {
@@ -75,10 +78,13 @@ section h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #Section3 p {
-  width: calc(800rem / 16);
+  max-width: calc(800rem / 16);
+  text-align: center;
+  padding: 1rem;
 }
 
 #Section2 form {
@@ -90,7 +96,7 @@ section h3 {
 #Section2 form input {
   width: 100%;
   margin-left: 2rem;
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 
 #Section2 form button {
@@ -110,6 +116,8 @@ section h3 {
 .sectionuserstory {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .UserStoryTitle {
@@ -119,6 +127,7 @@ section h3 {
 
 .UserStoryPhoto {
   max-width: calc(400rem / 16);
+  margin: 0 1rem;
 }
 
 .UserStoryPhoto img {
