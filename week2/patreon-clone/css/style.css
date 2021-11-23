@@ -54,3 +54,23 @@ a.ButtonTypeLink:hover {
 main {
   /* width: 100vw; */
 }
+
+.searchfieldcontainerLarge {
+  position: relative;
+  width: 1000%;
+  height: 2rem;
+}
+
+.searchfieldcontainerLarge::before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.8rem;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  font-weight: 900;
+  top: 10px;
+  left: 42px;
+  z-index: 1;
+  color: var(--greyborder);
+}

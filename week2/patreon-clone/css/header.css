@@ -49,6 +49,7 @@ input.searchfield {
   border-radius: 6rem;
   position: relative;
   padding-left: 40px;
+  /* height: 3rem; */
 }
 .searchfieldcontainer {
   position: relative;
@@ -183,6 +184,7 @@ ul.MenuTree li ul li span.MenuItemDescription {
 @media (min-width: 576px) {
   .searchfieldcontainer {
     display: block;
+  :;
   }
 }
 
