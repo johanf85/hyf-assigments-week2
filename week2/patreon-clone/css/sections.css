@@ -25,7 +25,7 @@ section p {
 #Section1 {
   display: flex;
   justify-content: center;
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 
 #Section1 .section1left {
@@ -53,6 +53,13 @@ section p {
 
 section h2 {
   font-size: calc(42rem / 16);
+  font-family: "Walsheim";
+}
+
+section h3 {
+  color: var(--color-coral);
+  font-size: calc(34rem / 16);
+  font-family: "Walsheim";
 }
 
 #Section3 {
@@ -64,4 +71,43 @@ section h2 {
 
 #Section3 p {
   width: calc(800rem / 16);
+}
+
+#Section2 form {
+  width: 100%;
+  max-width: calc(900rem / 16);
+  display: flex;
+}
+
+#Section2 form input {
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+#Section2 form button {
+  display: inline-block;
+  background-color: #ff424d;
+  border-radius: 9999px;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid transparent;
+  line-height: 1.9;
+  padding: 0.46875rem 1rem;
+  font-size: 0.875rem !important;
+  width: max-content;
+  padding: 0.5rem 1.5rem;
+}
+
+.sectionuserstory {
+  display: flex;
+  justify-content: center;
+}
+
+.UserStoryTitle {
+  max-width: calc(460rem / 16);
+}
+
+.UserStoryPhoto {
+  max-width: calc(400rem / 16);
 }
