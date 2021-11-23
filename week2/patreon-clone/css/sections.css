@@ -106,8 +106,13 @@ section h3 {
 
 .UserStoryTitle {
   max-width: calc(460rem / 16);
+  margin: 0 1rem;
 }
 
 .UserStoryPhoto {
   max-width: calc(400rem / 16);
+}
+
+.UserStoryPhoto img {
+  max-width: 100%;
 }

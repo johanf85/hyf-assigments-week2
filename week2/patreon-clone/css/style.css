@@ -1,6 +1,7 @@
 @import url(header.css);
 @import url(fonts.css);
 @import url(sections.css);
+@import url(footer.css);
 
 :root {
   --color-coral: #ff424d;
