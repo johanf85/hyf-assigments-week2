@@ -17,7 +17,6 @@ nav {
   height: var(--navbarheight);
   margin-right: auto;
   margin-left: 1rem;
-  /* height: auto; */
 }
 
 i.fa-logo-navbar {
@@ -81,13 +80,7 @@ ul.MenuTree {
   background-color: #fff;
   top: 0;
   left: 0;
-  margin-top: 65px !important;
   height: 100vh;
-}
-
-ul.MenuTree > li {
-  /* height: 3rem; */
-  /* position: relative; */
 }
 
 ul.MenuTree a {
@@ -112,6 +105,7 @@ ul.MenuTree li ul {
 
 ul.MenuTree {
   display: none;
+  margin-top: 65px;
 }
 
 ul.MenuTree.MenuVisible {
@@ -162,11 +156,9 @@ ul.MenuTree li ul li span.MenuItemDescription {
 #hamburgermenu {
   /* display: inline-block; */
   vertical-align: top;
-  /* I think it is convenient to use inline-block if suitable, because of breaking and being able to set vertical align */
   margin-left: 10px;
   margin-top: 10px;
   z-index: 2;
-  /* position: relative apparently needed for z-index */
   position: relative;
   margin-right: 2rem;
 }
@@ -197,8 +189,19 @@ ul.MenuTree li ul li span.MenuItemDescription {
   transform: rotate(-45deg) translate(-5px, -1px);
   transition: transform 0.2s;
 }
+@media (min-width: 576px) {
+  .searchfieldcontainer {
+    display: block;
+  }
+}
 
 @media (min-width: 992px) {
+  ul.MenuTree {
+    display: block;
+    position: relative;
+    margin-top: 0;
+  }
+
   #hamburgermenu {
     display: none;
   }
@@ -223,6 +226,7 @@ ul.MenuTree li ul li span.MenuItemDescription {
     position: relative;
     height: 3rem;
     padding: 0 1rem;
+    border: 0;
   }
 
   ul.MenuTree li ul li:first-child {
@@ -243,6 +247,14 @@ ul.MenuTree li ul li span.MenuItemDescription {
 
   ul.MenuTree {
     height: 2.75em;
+  }
+  ul.MenuTree li.MenuItemDropdown {
+    padding-right: 1.4rem;
+    background-image: url(../images/arrow-down.svg);
+    background-size: 1rem 1rem;
+    background-position-y: 0.3rem;
+    background-position-x: 95%;
+    background-repeat: no-repeat;
   }
 
   ul.MenuTree li > ul {
