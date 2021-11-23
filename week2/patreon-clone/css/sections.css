@@ -39,6 +39,7 @@ section p {
 #Section1 img {
   width: 30.5rem;
   height: 17.4rem;
+  max-width: 100%;
 }
 
 /* Am playing around with Grid here, this is not the best way to do this. But as it is an excercise I leave it for now*/

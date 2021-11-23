@@ -10,6 +10,8 @@
   --headerheight: 2.5rem;
   --color-black: #141518;
   --color-midnight: #241e12;
+  --navbarheight: 1.2rem;
+  --width-between-items-1st-dropdown: 2rem;
 }
 
 html {

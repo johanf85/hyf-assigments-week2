@@ -3,10 +3,11 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-evenly;
+  padding: 4rem 0 9rem 0;
 }
 
 footer h4 {
-  font-size: calc (10rem / 16);
+  font-size: calc(10rem / 16);
   text-transform: uppercase;
 }
 
